@@ -1,10 +1,7 @@
 import java.util.Arrays;
-
 // применение сортировки слиянием на java - merge(int[] A, int p, int q, int r)
-
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-
 
         long start = System.currentTimeMillis();
         int[] arr = new int[]{5,2,4,6,1,3,2,6,7,4,9,7,8,11,21,42,3};
@@ -15,13 +12,10 @@ public class Main {
         long finish = System.currentTimeMillis();
         System.out.println(Arrays.toString(arr));
         System.out.println("Прошло времени, мс: " + (finish - start));
-
     }
-
 
     public static void sort(int[] A, int p, int r) {
         if (p >= r) return;
-
         int q = (p + r) / 2;
         sort(A, p, q);
         sort(A, q + 1, r);
@@ -29,7 +23,6 @@ public class Main {
     }
 
     public static void merge(int[] A, int p, int q, int r) {
-
         int n1 = q - p + 1;
         int n2 = r - q;
         int[] L = new int[n1 + 1];
